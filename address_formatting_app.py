@@ -294,28 +294,3 @@ def json_output():
 if (__name__ == "__main__"):
     app.run(host='0.0.0.0',debug=True)
     serve(app, host='0.0.0.0', port=5000, url_scheme='https')
-# @app.route('/success', methods = ['POST'])
-# def success():
-#     global output_file
-#     if request.method == 'POST':
-#         f = request.files['file']
-#         json_file=f.filename
-#         output_file=format(json_file)
-#         # f.save(f.filename)
-#         # output_file.save(output_file)
-#         return render_template("success.html", name = f.filename)
-#
-# @app.route('/download')
-# def download_file():
-#     output=output_file
-#     return output
-#     return (send_file(output,attachment_filename="formatted_address.json", as_attachment = True))
-#     # return 'hello google app engine!'
-#
-# @app.route('/view')
-# def view_file():
-#     # p= M
-# #     data_file = open('D:\flask\output_file.csv', 'w', newline='')
-# # csv_writer = csv.writer(data_file)
-#
-#     return send_file(output_file, as_attachment = True)
