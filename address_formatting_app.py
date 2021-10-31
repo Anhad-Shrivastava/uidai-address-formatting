@@ -232,9 +232,10 @@ def format(json_file):
 
 #Function to remove a base_string from another string
 def remove_dup(base_string,string):
+    base_string=base_string.lower()
     strings= string.split(",")
     for a in strings:
-        b=a.strip()
+        b=a.lower().strip()
         strings[strings.index(a)]= b
     if base_string in strings:
         return re.sub(base_string,'',string).strip(',')
@@ -245,9 +246,12 @@ def check_dup(string, base_string):
     #remove special characters
     base_string = ''.join(e for e in base_string if e.isalnum())
     base_string = ''.join(base_string.split())
+    base_string = base_string.lower()
+       
     string = ''.join(e for e in string if e.isalnum())
     # removing spaces for better comparasion
     string = ''.join(string.split())
+    string = string.lower()
     # regex to remove the base_string part to see remaining part
     new_string = re.sub(base_string, '', string).strip()
     # new_string is the product of substitution. if it is not equal to the original string,
