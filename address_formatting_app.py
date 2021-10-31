@@ -232,6 +232,7 @@ def format(json_file):
 
 #Function to remove a base_string from another string
 def remove_dup(base_string,string):
+    string=string.lower()
     base_string=base_string.lower()
     strings= string.split(",")
     for a in strings:
