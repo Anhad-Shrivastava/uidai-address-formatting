@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT cardisle: address_formatting_app.py
+web: waitress-serve --port=$PORT uidai-address-formatting:address_formatting_app
