@@ -1,1 +1,3 @@
 #Files to ignore by heroku slug
+.csv
+.json
