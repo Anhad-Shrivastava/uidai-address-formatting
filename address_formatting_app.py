@@ -25,7 +25,7 @@ def isEnglish(s):
 #NOTE : Only transliteration is taking place
 def translate(string):
     if (isEnglish(string) == False):
-        return None
+        return ""
     return string
 
 # function for formatting address file
