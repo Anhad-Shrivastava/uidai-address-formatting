@@ -25,9 +25,7 @@ def isEnglish(s):
 #NOTE : Only transliteration is taking place
 def translate(string):
     if (isEnglish(string) == False):
-        language_id = gs.detect(string)
-        translated = gs.translate(string,language_id)
-        return translated
+        return None
     return string
 
 # function for formatting address file
