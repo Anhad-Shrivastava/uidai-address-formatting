@@ -51,6 +51,7 @@ def format(json_file):
         if row['district'] != None:
             # base string ->the string of a column that will be compared with all other columns
             base_string = re.sub(" city", '', translate(row['district']).strip()).strip()
+            base_string = re.sub(" City", '', translate(row['district']).strip()).strip()
 
             # now, we have the improved string, we will compare it with column strings
             # comparasion of district will only take place with sub-district,vtc,locality and landmark
@@ -83,7 +84,8 @@ def format(json_file):
         if 'sub-district' in df:
             if row['sub-district'] != None:
                 base_string = re.sub(" city", '', translate(row['sub-district']).strip()).strip()
-
+                base_string = re.sub(" City", '', translate(row['sub-district']).strip()).strip()
+     
                 #sub-district is compared with vtc,locality,landmark,street
                 if row['vtc'] != None:
                     string = translate(row['vtc'])
@@ -120,7 +122,7 @@ def format(json_file):
         #3. for vtc as parent string
         if row['vtc'] != None:
             base_string = re.sub(" city", '', translate(row['vtc']).strip()).strip()
-
+            base_string = re.sub(" City", '', translate(row['vtc']).strip()).strip()
             #vtc will be compared with locality, landmark, street, building
             if row['locality'] != None:
                 string = translate(row['locality'])
